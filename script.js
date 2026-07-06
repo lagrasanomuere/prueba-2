@@ -17,12 +17,12 @@ if (Hls.isSupported()) {
 
     const hls = new Hls();
 
-    hls.loadSource("https://jugandorcriticon.duckdns.org/live/stream/index.m3u8");
+    hls.loadSource("https://streamJC.b-cdn.net/live/stream/index.m3u8");
 
     hls.attachMedia(video);
 
 } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
 
-    video.src = "https://jugandorcriticon.duckdns.org/live/stream/index.m3u8";
+    video.src = "https://streamJC.b-cdn.net/live/stream/index.m3u8";
 
 }
