@@ -9,7 +9,12 @@
     <title>JugandorCriticonOficial</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    
 </head>
 
 <body>
@@ -32,10 +37,12 @@
     <main class="video">
 
         <!-- De momento seguimos usando el reproductor de MediaMTX -->
-        <iframe
-            src="http://127.0.0.1:8889/live/mistream/"
-            allow="autoplay; fullscreen">
-        </iframe>
+<video
+    id="player"
+    controls
+    playsinline
+    autoplay>
+</video>
 
         <div class="info">
 
