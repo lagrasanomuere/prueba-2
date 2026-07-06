@@ -1,33 +1,28 @@
-const mensajes = document.getElementById("mensajes");
+const video = document.getElementById("player");
 
-const input = document.getElementById("mensaje");
-
-const boton = document.getElementById("btnEnviar");
-
-function enviar(){
-
-    if(input.value.trim()=="") return;
-
-    mensajes.innerHTML += `
-        <div class="msg">
-            <span class="user">Tú:</span>
-            ${input.value}
-        </div>
-    `;
-
-    mensajes.scrollTop = mensajes.scrollHeight;
-
-    input.value="";
-}
-
-boton.onclick = enviar;
-
-input.addEventListener("keypress",function(e){
-
-    if(e.key==="Enter"){
-
-        enviar();
-
-    }
-
+const player = new Plyr(video, {
+    controls: [
+        "play-large",
+        "play",
+        "progress",
+        "current-time",
+        "mute",
+        "volume",
+        "settings",
+        "fullscreen"
+    ]
 });
+
+if (Hls.isSupported()) {
+
+    const hls = new Hls();
+
+    hls.loadSource("http://127.0.0.1:8888/live/mistream/index.m3u8");
+
+    hls.attachMedia(video);
+
+} else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+
+    video.src = "http://127.0.0.1:8888/live/mistream/index.m3u8";
+
+}
