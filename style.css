@@ -221,27 +221,16 @@ aside{
 }
 
 .logo{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     font-size:22px;
-
     font-weight:bold;
-
 }
 
 .logo img{
-
-    width:42px;
-
-    height:42px;
-
-    border-radius:50%;
-
+    width:40px;
+    height:40px;
     object-fit:cover;
-
+    border-radius:50%;
 }
