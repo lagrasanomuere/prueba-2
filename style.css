@@ -56,6 +56,7 @@ header{
 
     height:calc(100vh - 60px);
 
+    overflow:hidden;
 }
 
 .video{
@@ -109,10 +110,8 @@ aside{
 .chat{
     display:flex;
     flex-direction:column;
-
-    height:800px;
-
     flex:1;
+    height:100%;
 }
 
 .chat-header{
@@ -197,10 +196,9 @@ aside{
 
 .twitch-chat{
     width:100%;
-    height:860px;
+    height:100%;
     border:none;
 }
-
 .logo{
     display:flex;
     align-items:center;
@@ -303,4 +301,11 @@ aside{
 }
 :root{
     --plyr-color-main: #9146FF;
+}
+.video{
+    overflow:auto;
+}
+
+aside{
+    overflow:hidden;
 }
