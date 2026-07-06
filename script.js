@@ -17,7 +17,7 @@ if (Hls.isSupported()) {
 
     const hls = new Hls();
 
-    hls.loadSource("http://127.0.0.1:8888/live/mistream/index.m3u8");
+    hls.loadSource("http://64.176.23.32:8888/live/stream/index.m3u8");
 
     hls.attachMedia(video);
 
