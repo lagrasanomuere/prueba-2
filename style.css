@@ -95,6 +95,9 @@ aside{
     border-left:1px solid #303032;
     padding:15px;
     gap:15px;
+
+    /* IMPORTANTE */
+    align-items:stretch;
 }
 
 .banner{
@@ -106,10 +109,10 @@ aside{
 .chat{
     display:flex;
     flex-direction:column;
-    height:550px;   /* Cambia este valor a tu gusto */
-    background:#202024;
-    border-radius:10px;
-    overflow:hidden;
+
+    height:500px;
+
+    flex:none;
 }
 
 .chat-header{
@@ -194,7 +197,7 @@ aside{
 
 .twitch-chat{
     width:100%;
-    height:100%;
+    height:460px;
     border:none;
 }
 
