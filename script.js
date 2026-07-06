@@ -23,6 +23,6 @@ if (Hls.isSupported()) {
 
 } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
 
-    video.src = "http://127.0.0.1:8888/live/mistream/index.m3u8";
+    video.src = "http://64.176.23.32:8888/live/stream/index.m3u8";
 
 }
